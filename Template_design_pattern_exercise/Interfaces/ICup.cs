@@ -8,7 +8,7 @@ namespace Template_design_pattern_exercise.Interfaces
 {
 	public interface ICup
 	{
-		IBeverage beverage { get; }
+		IBeverage beverage { get; set;  }
 
 		void AddIngredient(IBeverageIngredient extraIngredient);
 	}

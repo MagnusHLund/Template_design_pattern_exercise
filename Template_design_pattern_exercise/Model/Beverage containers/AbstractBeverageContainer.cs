@@ -7,16 +7,20 @@ using Template_design_pattern_exercise.Interfaces;
 
 namespace Template_design_pattern_exercise.Model.Beverage_containers
 {
-	internal abstract class AbstractBeverageContainer : IBeverageContainer
+	public abstract class AbstractBeverageContainer : IBeverageContainer
 	{
+		internal List<IBeverageIngredient> ingredients = new List<IBeverageIngredient>();
+
 		public void Brew()
 		{
 
 		}
 
-		public void Pour(ICup cup) { }
+		public abstract void Pour(ICup cup);
 
-		public void AddIngredient(IBeverageIngredient ingredient) { }
+		public void AddIngredient(IBeverageIngredient ingredient) {
+			ingredients.Add(ingredient);	
+		}
 
 	}
 }

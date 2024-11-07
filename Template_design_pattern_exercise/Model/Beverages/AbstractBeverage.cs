@@ -9,5 +9,15 @@ namespace Template_design_pattern_exercise.Model.Beverages
 {
 	internal abstract class AbstractBeverage : IBeverage
 	{
+		internal List<IBeverageIngredient> ingredients;
+
+		public AbstractBeverage(List<IBeverageIngredient> ingredients) {
+			this.ingredients = ingredients;
+		}
+
+		public void Drink()
+		{
+			
+		}
 	}
 }

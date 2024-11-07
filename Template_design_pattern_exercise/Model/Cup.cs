@@ -9,8 +9,11 @@ namespace Template_design_pattern_exercise.Model
 {
 	internal class Cup : ICup
 	{
-		public IBeverage beverage { get; }
+		public IBeverage beverage { get; set; }
 
-		public void AddIngredient(IBeverageIngredient extraIngredient);
+		public void AddIngredient(IBeverageIngredient extraIngredient)
+		{
+
+		}
 	}
 }

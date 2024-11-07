@@ -15,9 +15,9 @@ namespace Template_design_pattern_exercise.Factories
 			kettle.Boil();
 
 			AbstractBeverageContainer BeverageContainer = PrepareBeverage(beverageToMake);
-			BeverageContainer.Brew();
-
 			kettle.Pour(BeverageContainer);
+
+			BeverageContainer.Brew();
 
 			Cup cup = new Cup();
 			BeverageContainer.Pour(cup);
@@ -50,8 +50,8 @@ namespace Template_design_pattern_exercise.Factories
 		private AbstractBeverageContainer PrepareTea()
 		{
 			Teapot teapot = new Teapot();
-			Lemon lemon = new Lemon();
-			teapot.AddIngredient(lemon);
+			Teabag teabag = new Teabag();
+			teapot.AddIngredient(teabag);
 
 			return teapot;
 		}
